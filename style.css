@@ -1,0 +1,190 @@
+* {
+  /*Reset de CSS*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /*Corpo, Url do background (imagem) e outros códigos*/
+  background-image: url(./assets/bg-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover
+}
+
+#caixa1{
+  /*Caixa principal. todo o conteúdo está guardado*/
+  width: 420px;
+  margin: 24px auto 0px auto
+}
+
+/*criação do modo light do site*/
+:root{
+  --text-color: white;
+  --bg-url: url(./assets/bg-mobile.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.529);
+  --surface-color: rgba(200, 200, 200, 0.3);
+  --surface-color-hover: rgba(70, 70, 70, 0.326);
+  --social-link-hover: rgba(32, 32, 32, 0.3);
+  --switch-bg-url: url(./assets/moon-stars.svg);
+}
+
+body{
+  background:var(--bg-url) top center/cover no-repeat;
+}
+
+.light{
+   --text-color: black;
+   --bg-url: url(./assets/bg-mobile-light.jpg);
+   --stroke-color: rgba(0, 0, 0, 0.529);
+   --surface-color: rgba(0, 0, 0, 0.2);
+   --surface-color-hover: rgba(255, 255, 255, 0.02);
+   --social-link-hover: rgba(0, 0, 0, 0.3);
+   --switch-bg-url: url(./assets/sun.svg);
+}
+
+#profile{
+  /*text-align, vai concentrar o texto no centro (todo o texto e até a imagem da parte de cima*/
+  text-align: center;
+}
+
+#profile img{
+  /*tramanho da imagem da tela*/
+  width: 144px;
+  height: 144px;
+}
+
+body * {
+  /*estilo da fonte do css*/
+  font-family: "Roboto", sans-serif;
+  color:var(--text-color);
+}
+
+#profile{
+  /*Perfil, display block, especificação e a borda de cor azul*/
+  font-weight: 500;
+  line-height: 24px;
+  
+}
+
+
+/*botões*/
+ul {/*ul. inicio de toda a lista la do HTML*/
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  
+  gap: 20px;
+  
+  margin-top: 10px;
+  
+}
+
+ul li a {
+  text-decoration: none;
+   border: 2px solid var(--stroke-color);
+   display: flex;
+   height: 50px;
+  
+   /*align horizontal e justify vertical*/
+   align-items: center;
+   justify-content: center;
+  
+   background: var(--surface-color);
+   /*entorno da borda*/
+   border-radius: 10px;
+   
+   flex-direction: column;
+/*Transition: faz a transição*/
+   transition: background 0.3s;
+
+   backdrop-filter: blur(4px);
+   
+}
+
+ul li {/*display e direção do flex, que possivelmente faz com que a lista tambem fique no centro e*/
+  display: flex;
+  flex-direction: column;
+  
+}
+
+a{ /* decoração do texto, Erickk2*/
+  text-decoration: underline;
+}
+
+/*Pseduo, ul li a:hover{} Propriedades e comportamentos de quando passar o mouse em cima*/
+ul li a:hover{
+   background: var(--surface-color-hover);
+}
+
+/*social-links*/
+/*espaçamento(gap) e a organização dos icones */
+#social-links{
+  display: flex;
+
+  padding: 12px 0;
+
+  justify-content: center;
+  font-size: 30px
+}
+/*organização acrescental (Só que essencial)*/
+#social-links a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:15px;
+
+  border-radius: 50% ;
+  transition: background 0.5s;
+}
+
+#social-links a:hover{
+  background: var(--social-link-hover);
+}
+
+footer{
+  align-items: center;
+  padding: 6;
+  margin-top: 10px;
+}
+
+/*Switch ou botão*/
+#switch button{
+  border: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: white var(--switch-bg-url) no-repeat center;
+  top: 50%;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+#switch span{
+  display: block;
+  width: 64px;
+  height: 24px;
+  border-radius: 9999px;
+  border: 1px solid var(--stroke-color);
+  -webkit-backdrop-filter: 4px;
+  background: var(--surface-color);
+  backdrop-filter: 4px;
+}
+
+#switch{
+  position: relative;
+  width: 64px;
+
+  margin: 4px auto;
+}
+
+.light #switch button{
+  right: 0;
+  left: initial;
+  border: 1px solid black;
+}
