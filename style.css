@@ -31,6 +31,7 @@ body {
   --surface-color-hover: rgba(70, 70, 70, 0.326);
   --social-link-hover: rgba(32, 32, 32, 0.3);
   --switch-bg-url: url(./assets/moon-stars.svg);
+  --hover-links-cor: rgba(0, 0, 0, 0.7);
 }
 
 body{
@@ -46,7 +47,7 @@ body{
    --surface-color-hover: rgba(255, 255, 255, 0.522);
    --social-link-hover: rgba(0, 0, 0, 0.3);
    --switch-bg-url: url(./assets/sun.svg);
-
+   --hover-links-cor: rgba(203, 203, 203, 0.7);
 }
 
 #profile{
@@ -123,6 +124,7 @@ a{ /* decoração do texto, Erickk2*/
 /*Pseduo, ul li a:hover{} Propriedades e comportamentos de quando passar o mouse em cima*/
 ul li a:hover{
    background: var(--surface-color-hover);
+
 }
 
 /*social-links*/
@@ -148,6 +150,7 @@ ul li a:hover{
 
 #social-links a:hover{
   background: var(--social-link-hover);
+     border: 3px solid var(--hover-links-cor);
 }
 
 footer{
