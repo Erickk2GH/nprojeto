@@ -107,7 +107,7 @@ ul li a {
    transition: background 0.3s;
 
    backdrop-filter: blur(4px);
-   
+   gap: 8px;
 }
 
 ul li {/*display e direção do flex, que possivelmente faz com que a lista tambem fique no centro e*/
