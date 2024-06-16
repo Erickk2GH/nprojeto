@@ -15,8 +15,10 @@ body {
 
 #caixa1{
   /*Caixa principal. todo o conteúdo está guardado*/
-  width: 420px;
-  margin: 24px auto 0px auto
+  width: 100%;
+  margin: 24px auto 0px auto;
+  max-width: 588px;
+  padding: 0 24px;
 }
 
 /*criação do modo light do site*/
